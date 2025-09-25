@@ -1,5 +1,8 @@
+let computerResult = 0;
+let playerResult = 0;
 function playGame(playerInput) {
   clearMessages();
+  clearResult();
   function getMoveName(argMoveId) {
     if (argMoveId == 1) {
       return "kamień";
@@ -52,10 +55,13 @@ function playGame(playerInput) {
 
     if (argComputerMove == "kamień" && argPlayerMove == "papier") {
       printMessage("Ty wygrywasz!");
+      ++playerResult;
     } else if (argComputerMove == "papier" && argPlayerMove == "nożyce") {
       printMessage("Ty wygrywasz!");
+      ++playerResult;
     } else if (argComputerMove == "nożyce" && argPlayerMove == "kamień") {
       printMessage("Ty wygrywasz!");
+      ++playerResult;
     } else if (argComputerMove == "kamień" && argPlayerMove == "kamień") {
       printMessage("Remis!");
     } else if (argComputerMove == "papier" && argPlayerMove == "papier") {
@@ -66,10 +72,13 @@ function playGame(playerInput) {
       printMessage("Nieprawidłowy wybór gracza! Gra nierozstrzygnięta!");
     } else {
       printMessage("Wygrał komputer!");
+      ++computerResult;
     }
   }
+  console.log(playerResult, computerResult);
 
   displayResult(computerMove, playerMove);
+  showResult(playerResult, computerResult);
 }
 
 // playGame(3);

@@ -1,0 +1,30 @@
+h1,
+h2 {
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+}
+.container button {
+  font-size: 30px;
+  padding: 20px;
+  margin: 20px 30px;
+  text-align: center;
+}
+.container button:hover {
+  opacity: 0.7;
+}
+.container button#play-rock {
+  background-color: darkgray;
+}
+.container button#play-paper {
+  background-color: white;
+}
+.container button#play-scissors {
+  background-color: black;
+  color: white;
+}
+.container #messages {
+  font-size: 24px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,40 @@
+body {
+  background-color: pink;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+  button {
+    font-size: 30px;
+    padding: 20px;
+    margin: 20px 30px;
+    text-align: center;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  button#play-rock {
+    background-color: darkgray;
+  }
+  button#play-paper {
+    background-color: white;
+  }
+  button#play-scissors {
+    background-color: black;
+    color: white;
+  }
+  #messages {
+    font-size: 24px;
+  }
+}
+
+#result {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
