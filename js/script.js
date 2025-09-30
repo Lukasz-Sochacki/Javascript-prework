@@ -5,11 +5,11 @@
   let playerResult = 0;
 
   for (let i = 1; i < 1001; i++) {
-    function playGame(playerInput) {
+    const playGame = function (playerInput) {
       clearMessages();
       clearResult();
 
-      function getMoveName(argMoveId) {
+      const getMoveName = function (argMoveId) {
         if (argMoveId == 1) {
           return "kamień";
         } else if (argMoveId == 2) {
@@ -20,7 +20,7 @@
           printMessage("Nie znam ruchu o id " + argMoveId + ".");
           return "nieznany ruch";
         }
-      }
+      };
       const randomNumber = Math.floor(Math.random() * 3 + 1);
       const computerMove = getMoveName(randomNumber);
       console.log("Wylosowana liczba to: " + randomNumber);
@@ -51,7 +51,7 @@
 
       printMessage("Twój ruch to: " + playerMove);
 
-      function displayResult(argComputerMove, argPlayerMove) {
+      const displayResult = function (argComputerMove, argPlayerMove) {
         console.log("moves:", argComputerMove, argPlayerMove);
 
         if (argComputerMove == "kamień" && argPlayerMove == "papier") {
@@ -75,7 +75,7 @@
           printMessage("Wygrał komputer!");
           ++computerResult;
         }
-      }
+      };
       console.log(playerResult, computerResult);
 
       displayResult(computerMove, playerMove);
@@ -90,7 +90,7 @@
           "%"
       );
       i += 1000;
-    }
+    };
 
     // playGame(3);
 

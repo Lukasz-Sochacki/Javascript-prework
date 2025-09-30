@@ -1,20 +1,20 @@
-function printMessage(msg) {
+const printMessage = function (msg) {
   let div = document.createElement("div");
   div.innerHTML = msg;
   document.getElementById("messages").appendChild(div);
-}
+};
 
-function clearMessages() {
+const clearMessages = function () {
   document.getElementById("messages").innerHTML = "";
-}
+};
 
-function showResult(player, computer) {
+const showResult = function (player, computer) {
   let div = document.createElement("div");
   div.innerHTML =
     "Aktualny wynik (Gracz - Komputer): " + player + " - " + computer;
   document.getElementById("result").appendChild(div);
-}
+};
 
-function clearResult() {
+const clearResult = function () {
   document.getElementById("result").innerHTML = "";
-}
+};
