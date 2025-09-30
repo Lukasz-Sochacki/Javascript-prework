@@ -10,7 +10,8 @@ function clearMessages() {
 
 function showResult(player, computer) {
   let div = document.createElement("div");
-  div.innerHTML = player + " - " + computer;
+  div.innerHTML =
+    "Aktualny wynik (Gracz - Komputer): " + player + " - " + computer;
   document.getElementById("result").appendChild(div);
 }
 
