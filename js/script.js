@@ -24,31 +24,10 @@
       const randomNumber = Math.floor(Math.random() * 3 + 1);
       const computerMove = getMoveName(randomNumber);
       console.log("Wylosowana liczba to: " + randomNumber);
-
-      /*if (randomNumber == 1) {
-    computerMove = "kamień";
-  } else if (randomNumber == 2) {
-    computerMove = "papier";
-  } else if (randomNumber == 3) {
-    computerMove = "nożyce";
-  } */
-
-      // let playerInput = prompt(
-      //   "Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce."
-      // );
-
       printMessage("Mój ruch to: " + computerMove);
+
       const playerMove = getMoveName(playerInput);
       console.log("Gracz wpisał: " + playerInput);
-
-      /*if (playerInput == "1") {
-    playerMove = "kamień";
-  } else if (playerInput == "2") {
-    playerMove = "papier";
-  } else if (playerInput == "3") {
-    playerMove = "nożyce";
-  } */
-
       printMessage("Twój ruch to: " + playerMove);
 
       const displayResult = function (argComputerMove, argPlayerMove) {
@@ -91,8 +70,6 @@
       );
       i += 1000;
     };
-
-    // playGame(3);
 
     document.getElementById("play-rock").addEventListener("click", function () {
       playGame(1);
